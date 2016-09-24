@@ -1,0 +1,87 @@
+/*=============================================================================
+  Navigation menu styling
+=============================================================================*/
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $dark-color-on-white-bgr;
+  position: fixed;
+  width: 100%;
+  top: 0 !important;
+  z-index: 1;
+
+  li {
+    float: left;
+    a {
+      display: inline-block;
+      color: $light-color-on-dark-bgr;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 17px;
+      &:hover {
+        background-color: $light-color-on-dark-bgr;
+        color: $dark-color-on-white-bgr;
+        transition: background-color 0.3s, color 0.3s;
+      }
+    }
+    &.icon {
+      display: none;
+    }
+  }
+}
+
+//Display on mobile screens
+@media (max-width: 768px) {
+  ul.topnav {
+    margin-left: -15px;
+  }
+
+  //Hide all menu items except the first one
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+
+  ul.topnav.responsive {
+    position: relative;
+    margin-top: -10px;
+    width: 110%;
+    //margin-right: -100px !important;
+    //padding-right: 0;
+  }
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 20px;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+//Styling on tablets
+@media (min-width: 768px) and (max-width: 992px) {
+  ul.topnav {
+    margin-left: -40px;
+    padding-left: 26px;
+  }
+}
+
+@media (min-width: 992px) {
+  ul.topnav {
+    margin-left: -80px;
+    padding-left: 65px;
+  }
+}

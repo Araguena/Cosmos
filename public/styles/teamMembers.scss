@@ -1,0 +1,67 @@
+/* =====================================================================================================================
+   Team members section
+   ===================================================================================================================*/
+
+.team {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team__member {
+  margin-bottom: 2em;
+  padding-right: 75px;
+  max-width: 250px;
+
+  img {
+    margin-bottom: 1em;
+  }
+
+  .send-mail-btn {
+    border: none;
+    background: none;
+    color: $dark-color-on-white-bgr;
+    width: 15px;
+    height: 15px;
+  }
+
+  .link-to-fb {
+    color: $dark-color-on-white-bgr;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+  }
+}
+
+
+.team__stats {
+  display: inline-block;
+
+  p {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $dark-color-on-white-bgr;
+  }
+
+  //TODO: better classname
+  .h1 {
+    color: $dark-color-on-white-bgr;
+    font-size: 50px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      @include border-top($dark-color-on-white-bgr);
+      //border-top: 2px solid $dark-color-on-white-bgr;
+      bottom: 10px;
+      margin-left: 10px;
+    }
+  }
+}

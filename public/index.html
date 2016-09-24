@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cosmos Landing Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css"
+          integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+    <link href='styles/main.css' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/f65afd88e0.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_fc6Vi2iD63XWwrnVyyql0");
+        })();
+    </script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/teamMembers.js"></script>
+    <script src="js/autocomplete.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWW4u2Z2iic51FnrOWAlxX2uLWJfSPEKc&language=en&callback=initialize"
+            type="text/javascript"></script>
+    <script src="js/googleMap.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="page-wrap">
+    <header id="home" class="parallax-window" data-parallax="scroll" data-image-src="styles/img/cosmos-01.jpg">
+        <ul class="topnav" id="myTopnav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#team">Our team</a></li>
+            <li><a href="#joinTeam">Join us</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="toggleMenu()">&#9776;</a>
+            </li>
+        </ul>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hidden-xs hidden-sm col-md-3 visible-md-3">
+                    <img class="logo" src="styles/img/logo.png">
+                </div>
+                <div class="hidden-xs hidden-sm col-md-6 offset-md-3">
+                    <div class="contact-details">
+                        <p>
+                        <address><a
+                                href="https://www.google.com.ua/maps/place/VTB+Bank/@49.8167818,24.0190513,17z/data=!3m1!4b1!4m5!3m4!1s0x473ae78d2530842f:0xfeafbd771f45b52c!8m2!3d49.8167784!4d24.02124?hl=en">Lviv
+                            79053, Ukraine</a></address>
+                        </p>
+                        <p>
+                            <span class="phone-number"><a href="tel:+380673847801">tel: 800-2345-6789</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h1 class="page-title">
+                Explore<br>
+                the planets
+            </h1>
+
+            <h2>
+                Astronomical information<br>
+                about the universe
+            </h2>
+
+            <p>
+                We are a group of amateur astronomers working together to improve astronomical knowledge and
+                observational
+                skills. We make ourselves and our instruments available to promote public interest in astronomy. Cosmos
+                members
+                are a varied group of colleagues who share a curiosity about the sky. Some members are scientists or
+                engineers,
+                while others are artists or craftspeople, building contractors or college students. Ability levels span
+                the
+                range from novice to expert.
+            </p>
+
+            <div class="section-number">
+                01
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-number">
+                    02
+                </div>
+                <div class="bordered-box">
+                    <h1>
+                        About
+                    </h1>
+
+                    <p>
+                        Our company was founded in 2012, with the goal to produce and market innovative observational
+                        astronomy
+                        aids and educational materials for amateur astronomers and students of all levels.
+                    </p>
+                </div>
+            </div>
+            <div class="hidden-xs col-md-6">
+                <img class="section-image img-responsive col-xs-12" src="styles/img/space-02.jpg">
+            </div>
+        </div>
+    </section>
+    <section id="team">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-number">
+                    03
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <h1>
+                    Our team
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-xs-12 col-md-8 team js-team">
+
+
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="team__stats bordered-box col-xs-12">
+                    <p>
+                        <span class="h1 js-totalMemberCount">0</span><br> members<br> in total
+                    </p>
+
+                    <p>
+                        <span class="h1 js-latestMemberCount">0</span><br> joined<br>
+                        in the last <span class="js-hours-diff" data-latest-hours="2">2</span> hours
+                    </p>
+                </div>
+            </div>
+
+            <!--Modal dialog box for sending email to member-->
+            <div class="modal" id="sendEmailToMember">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close-btn closeEmailDialogBtn">X</span>
+
+                        <h3>Send email</h3>
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+                            <label for="emailAuthor">Your name:</label><br>
+                            <input type="text" name="emailAuthor" id="emailAuthor" required><br>
+                            <label for="emailAuthorEmail">Your email:</label><br>
+                            <input type="email" name="emailAuthorEmail" id="emailAuthorEmail" required><br>
+                            <label for="memberEmail">Send to:</label><br>
+                            <input type="email" name="memberEmail" id="memberEmail" class="js-send-to-email"
+                                   disabled><br>
+                            <label for="emailBody">Message:</label><br>
+                            <textarea rows="3" name="emailBody" id="emailBody" required></textarea><br>
+                            <button class="js-send-email" type="button">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="joinTeam" class="parallax-window" data-parallax="scroll" data-image-src="styles/img/cosmos-02.jpg">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-number white-on-blue-background">
+                    04
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <h1 class="white-on-blue-background">
+                    Join us
+                </h1>
+            </div>
+        </div>
+        t
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <p class="white-on-blue-background">
+                    For many years our company was a small sole proprietorship serving local astronomers and various
+                    astronomy
+                    club.
+                    Within a few years, Cosmos had built a solid reputation for products with intellectual and technical
+                    integrity
+                    and that is still the hallmark of our products today.
+                </p>
+            </div>
+
+            <div class="member-form col-xs-12 col-md-6 form-on-dark-bgr">
+                <form>
+                    <input type="text" placeholder="First name" name="memberFirstName" required><br>
+                    <input type="text" placeholder="Last name" name="memberLastName" required><br>
+                    <select name="memberGender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br>
+                    <input type="email" placeholder="Email" name="memberEmail" required><br>
+                    <!--<input type="text" placeholder="Position: New member" disabled><br>-->
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-number">
+                    05
+                </div>
+                <h1>
+                    Space news
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <article class="col-xs-12">
+                <h3>
+                    Hubble helps solve mystery of 'born-again' stars
+                </h3>
+
+                <p>
+                    For the past 60 years, astronomers have been puzzled by an unusual type of star that looks hotter
+                    and
+                    bluer
+                    than it should for its age. It has been dubbed a "blue straggler" because it seems to lag behind the
+                    evolution of neighboring stars.
+                </p>
+            </article>
+        </div>
+        <div class="row">
+            <article class="col-xs-12 col-md-10 offset-md-2">
+                <h3>
+                    NASA space telescope see magnified image of the faintest galaxy from the early universe
+                </h3>
+
+                <p>
+                    Hunting for faraway galaxies that existed long, long ago is like a fishing trip for astronomers. So
+                    far
+                    only
+                    the 'big fish' have been found, bright galaxies that existed just a few hundred million years after
+                    the
+                    big
+                    bang.
+                </p>
+            </article>
+        </div>
+        <div class="row">
+            <article class="col-xs-12 col-md-8 offset-md-4">
+                <h3>
+                    Cosmic filaments exposed near huge cluster
+                </h3>
+
+                <p>
+                    ESA’s XMM-Newton X-ray observatory has revealed three massive filaments of hot gas flowing towards
+                    acluster
+                    of galaxies, uncovering a portion of the cosmic skeleton that pervades the entire Universe.
+                </p>
+            </article>
+        </div>
+        <div class="row">
+            <img class="section-image img-responsive hidden-xs col-md-6 offset-md-3" src="styles/img/space-04.jpg">
+        </div>
+    </section>
+    <section id="contacts" class="parallax-window" data-parallax="scroll" data-image-src="styles/img/cosmos-03.jpg">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-number white-on-blue-background">
+                    06
+                </div>
+                <h1 class="white-on-blue-background">
+                    Contacts
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <p class="white-on-blue-background">
+                    We are always ready to help you. There are many ways to contact us. You may drop us a line, give us
+                    a
+                    call
+                    or
+                    send an email, choose what suits you the most.
+                </p>
+            </div>
+
+            <div class="feedback-form col-xs-12 col-md-6 form-on-dark-bgr">
+                <form>
+                    <datalist id="json-members-list"></datalist>
+                    <input id="members-list" list="json-members-list" type="text" placeholder="Name"
+                           name="name" required value=""><br>
+                    <input type="email" placeholder="Email" name="email" required value=""><br>
+                    <textarea placeholder="Message" name="message" required></textarea><br>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Comments</h3>
+            </div>
+        </div>
+        <div class="row filters">
+            <div class="col-xs-12">
+                <p>Filter by:</p>
+            </div>
+            <div class="col-xs-12 col-md-2 col-lg-2">
+                <select class="js-comment-filter-by-user">
+                    <option selected="selected" value="Name">Name</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-2 col-lg-2">
+                <select class="js-comment-filter-by-year">
+                    <option value="Year" selected="selected">Year</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-2 col-lg-2">
+                <select class="js-comment-filter-by-month" disabled>
+                    <option selected="selected" disabled="disabled" value="0">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-2 col-lg-2">
+                <button class="js-filter-comments btn-block" type="button">Filter</button>
+            </div>
+            <div class="col-xs-12 col-md-2 col-lg-2">
+                <button class="js-display-all-comments btn-block" type="button">Clear</button>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="comments-list">
+
+            </div>
+        </div>
+        <!--Clear after the comments so that map is not displayed on top of them-->
+        <div class="clearfix"></div>
+
+        <!--Modal dialog box for comment editing-->
+        <div class="modal" id="commentEditBox">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close-btn closeDialogBtn">X</span>
+
+                    <h3>Edit comment</h3>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <label for="commentAuthor">Name:</label><br>
+                        <input type="text" name="commentAuthor" id="commentAuthor" disabled><br>
+                        <label for="commentMessage">Message:</label><br>
+                        <textarea rows="3" name="commentMessage" id="commentMessage" required></textarea><br>
+                        <button class="js-send-new-cmnt-data" type="button">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="main-footer map">
+    <div class="map-container">
+
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+</body>
+</html>

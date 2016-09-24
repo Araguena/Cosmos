@@ -1,0 +1,123 @@
+/*=============================================================================
+  Styling of the comment and member edit boxes
+=============================================================================*/
+
+/* Background for modal dialog box */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for modal dialog box*/
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 100px auto;
+  padding: 0 0 15px 0;
+  border: 1px solid #888;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    &:focus {
+      outline: none;
+      outline: 1px solid $dark-color-on-white-bgr;
+    }
+  }
+
+  button {
+    color: $light-color-on-dark-bgr;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Raleway', Arial, sans-serif;
+    padding: 10px 20px;
+    border: none;
+    background-color: $dark-color-on-white-bgr;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+/*Styling for Close button in the dialog box */
+.close-btn {
+  color: $light-color-on-dark-bgr;
+  float: right;
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal box header */
+.modal-header {
+  padding: 10px 25px;
+  background-color: $dark-color-on-white-bgr;
+  color: $light-color-on-dark-bgr;
+  font-family: 'Raleway', sans-serif;
+
+  h3 {
+    color: $light-color-on-dark-bgr;
+    font-size: 16px;
+  }
+}
+
+.modal-body {
+  padding: 15px 25px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .modal-content {
+    width: 80%;
+  }
+}

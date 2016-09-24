@@ -1,0 +1,107 @@
+/*=============================================================================
+  Comments styling
+=============================================================================*/
+.comments-list {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+
+  article {
+    position: relative;
+    padding-left: 90px;
+
+    img {
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      width: 60px;
+    }
+  }
+}
+
+.commentContainer {
+  @include border(1px, $dark-color-on-white-bgr);
+  width: 450px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  position: relative;
+
+  header {
+    color: $dark-color-on-white-bgr;
+    font-weight: 500;
+    font-variant: small-caps;
+    margin-bottom: 1em;
+  }
+
+  footer {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+  }
+}
+
+.delete-comment-btn {
+  border: none;
+  background: none;
+  color: $dark-color-on-white-bgr;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+}
+
+.edit-comment-btn {
+  border: none;
+  background: none;
+  color: $dark-color-on-white-bgr;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  height: 20px;
+  width: 20px;
+}
+
+.filters {
+
+  margin-bottom: 10px;
+  select {
+    width: 100%;
+    @include border(1px, $dark-color-on-white-bgr);
+    padding: 7px 5px;
+    margin-bottom: 10px;
+
+    &:focus {
+      outline: none;
+      outline: 1px solid $dark-color-on-white-bgr;
+    }
+
+  }
+  button {
+    color: $light-color-on-dark-bgr;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Raleway', Arial, sans-serif;
+    padding: 10px 20px;
+    border: none;
+    background-color: $dark-color-on-white-bgr;
+    margin: 0 auto;
+    font-weight: 300;
+    transition: background-color 0.75s, font-weight 0.75s, color 0.75s;
+    margin-right: 3px;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: $light-color-on-dark-bgr;
+      color: $dark-color-on-white-bgr;
+      font-weight: 700;
+      transition: background-color 0.75s, color 0.75s, font-weight 0.75s;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .filters button {
+    margin-left: 15px;
+  }
+}
