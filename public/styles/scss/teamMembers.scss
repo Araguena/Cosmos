@@ -1,0 +1,106 @@
+/* =====================================================================================================================
+   Team members section
+======================================================================================================================*/
+
+.team__heading {
+  margin-bottom: 1em;
+}
+
+//Container for team member cards
+.team {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -2em;
+}
+
+.team__member {
+  margin-bottom: 2em;
+  max-width: 250px;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  img {
+    margin-bottom: 1em;
+  }
+
+  .send-mail-btn {
+    border: none;
+    background: none;
+    color: $dark-color-on-white-bgr;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .link-to-fb {
+    color: $dark-color-on-white-bgr;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+.team__stats {
+  display: inline-block;
+
+  p {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $dark-color-on-white-bgr;
+  }
+
+  .team__stats__heading {
+    color: $dark-color-on-white-bgr;
+    font-size: 3rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      @include border-top($dark-color-on-white-bgr);
+      bottom: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team {
+    justify-content: space-around;
+    margin-left: 0;
+  }
+
+  .team__stats {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .team {
+    justify-content: space-between;
+    margin-left: -1em;
+  }
+  .team__member {
+    margin-bottom: 2em;
+    max-width: 200px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media (min-width: 992px) {
+  .team {
+    justify-content: flex-start;
+  }
+  .team__member {
+    min-width: 250px;
+  }
+}

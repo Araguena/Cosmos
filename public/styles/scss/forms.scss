@@ -1,0 +1,80 @@
+/*=============================================================================
+  Form styling
+=============================================================================*/
+.form-on-dark-bgr {
+  margin-bottom: 2em;
+
+  form  {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    outline: none;
+  }
+
+  input, textarea, select {
+    background-color: transparent;
+    width: 100%;
+    color: $light-color-on-dark-bgr;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    @include border(1px, $light-color-on-dark-bgr);
+    //border: 1px solid $light-color-on-dark-bgr;
+  }
+
+  /*Placeholder styling for input elements*/
+  ::-webkit-input-placeholder {
+    color: $light-color-on-dark-bgr;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: $light-color-on-dark-bgr;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: $light-color-on-dark-bgr;
+  }
+
+  :-ms-input-placeholder {
+    color: $light-color-on-dark-bgr;
+  }
+
+  option {
+    color: black;
+  }
+
+  button {
+    color: $light-color-on-dark-bgr;
+    width: 30%;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    @include border(2px, $dark-color-on-white-bgr);
+    //border: 2px solid $dark-color-on-white-bgr;
+    background-color: transparent;
+    transition: background-color 0.75s;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: $dark-color-on-white-bgr;
+      transition: background-color 0.75s;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback-form, .member-form {
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .feedback-form, .member-form {
+    button {
+      width: 100%;
+    }
+  }
+}

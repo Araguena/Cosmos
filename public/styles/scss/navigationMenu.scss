@@ -1,0 +1,84 @@
+/*=============================================================================
+  Navigation menu styling
+=============================================================================*/
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $dark-color-on-white-bgr;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  .topnav__item {
+    float: left;
+    a {
+      display: inline-block;
+      color: $light-color-on-dark-bgr;
+      text-align: center;
+      padding: 1rem 2rem 1rem 0;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: normal;
+      transition: font-weight 0.3s;
+      &:hover {
+        font-weight: bold;
+        transition: font-weight 0.3s;
+      }
+    }
+    &.icon {
+      display: none;
+    }
+  }
+}
+
+//Display on mobile screens
+@media (max-width: 768px) {
+  .topnav {
+    padding-left: 1rem;
+  }
+
+  //Hide all menu items except the first one
+  .topnav .topnav__item:not(:first-child) {
+    display: none;
+  }
+  .topnav .topnav__item.icon {
+    float: right;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+
+  .topnav.responsive {
+    position: fixed;
+  }
+
+  .topnav.responsive .topnav__item.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive .topnav__item {
+    float: none;
+    display: inline;
+  }
+  .topnav.responsive .topnav__item a {
+    display: block;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .topnav {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .topnav {
+    padding-left: 5rem;
+  }
+}
